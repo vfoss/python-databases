@@ -31,7 +31,7 @@ os.chdir(dname)
 conn = sqlite3.connect('rosterdb.sqlite')
 cur = conn.cursor()
 
-# Setup the tables we want in the SQLite database; 
+# Set up the tables we want in the SQLite database; 
 # overwrite the tables "User", "Member" and "Course" if they already exist.
 cur.executescript('''
 DROP TABLE IF EXISTS User;
@@ -85,7 +85,7 @@ str_data = urllib.urlopen(url).read()
 # Deserialize data and store as a Python object:
 json_data = json.loads(str_data)
 
-# Insert our JSON data into the SQLite database we have setup above:
+# Insert our JSON data into the SQLite database we have set up above:
 for entry in json_data:
 
     name = entry[0];
